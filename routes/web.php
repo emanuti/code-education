@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::pattern('id', '[0-9]+');
 
 Route::resource('category', 'CategoriesController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
