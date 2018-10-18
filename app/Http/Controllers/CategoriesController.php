@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace CodeEducation\Http\Controllers;
 
-use \App\Http\Requests\CategoryRequest;
-use \App\Category;
+use \CodeEducation\Http\Requests\CategoryRequest;
+use \CodeEducation\Category;
 
 class CategoriesController extends Controller
 {
