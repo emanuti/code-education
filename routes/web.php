@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * toda vez que vier id na rota eu valido se é um inteiro.
+ */
+Route::pattern('id', '[0-9]+');
+
+Route::resource('category', 'CategoriesController');
