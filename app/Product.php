@@ -19,4 +19,9 @@ class Product extends Model
     {
         return $this->belongsTo('CodeEducation\Category');
     }
+
+    public function images()
+    {
+        return $this->hasMany('CodeEducation\ProductImage');    
+    }
 }

@@ -22,8 +22,15 @@ Route::pattern('id', '[0-9]+');
 
 Auth::routes();
 
-Route::resource('category', 'CategoriesController');
-Route::resource('product', 'ProductsController');
+Route::resources([
+    'category' => 'CategoriesController',
+    'product' => 'ProductsController',
+]);
+
+Route::get('product/{id}/images', 'ProductsController@indexImages')->name('product.images.index');
+Route::get('product/{id}/images/create', 'ProductsController@createImage')->name('product.images.create');
+Route::post('product/{id}/images', 'ProductsController@storeImage')->name('product.images.store');
+Route::delete('product/image/{id}', 'ProductsController@destroyImage')->name('product.images.destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

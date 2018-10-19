@@ -34,6 +34,9 @@
                 <td class="col-md-3">
                     <div class="row">
                         <div class="col-md-2">
+                            <a href="{{ route('product.images.index', $product->id) }}" class="btn btn-sm">Images</a>
+                        </div>
+                        <div class="col-md-2">
                             <a href="{{ route('product.edit', $product->id) }}" class="btn btn-sm">Edit</a>
                         </div>
                         <div class="col-md-2">
